@@ -1,2 +1,2 @@
 # Testing
-Repo for the teaching
+Repo for the testing team
