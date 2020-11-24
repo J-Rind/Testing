@@ -1,4 +1,4 @@
-Findings from lecture + more:
+Findings from walk-through lecture + more regarding Board's main branch (11-23-20 ~6:00 PM):
 
 Although there is no expected outcome handed to us directly, we were expecting board.showBoard()
 to look like something along the line of the Checkers example:
@@ -88,11 +88,11 @@ null
 null
 null
 ---------------------------------------------------------------------------------------------------------------------
-Major issues with the unmodified output:
+Major issues with the unmodified output and code:
 
 - Setting the front and back rows of the board is incorrect
 - It does not output the names of the piece as expected
----> Also, if getName() is called on a null piece like above, an error occurs if other errors aren't accounted for first
+---> Also, if piece.getName() is called on a null piece like above, an error occurs if other errors aren't accounted for
 - the output of each name is on a separate line; it doesn't match the format as expected
 
 
