@@ -1,0 +1,110 @@
+Findings from lecture + more:
+
+Although there is no expected outcome handed to us directly, we were expecting board.showBoard()
+to look like something along the line of the Checkers example:
+
+__R0-0___0-1____R0-2___0-3____R0-4___0-5____R0-6___0-7__
+__1-0____R1-1___1-2____R1-3___1-4____R1-5___1-6____R1-7_
+__R2-0___2-1____R2-2___2-3____R2-4___2-5____R2-6___2-7__
+__3-0____3-1____3-2____3-3____3-4____3-5____3-6____3-7__
+__4-0____4-1____4-2____4-3____4-4____4-5____4-6____4-7__
+__W5-0___5-1____W5-2___5-3____W5-4___5-5____W5-6___5-7__
+__6-0____W6-1___6-2____W6-3___6-4____W6-5___6-6____W6-7_
+__W7-0___7-1____W7-2___7-3____W7-4___7-5____W7-6___7-7__
+
+
+
+Instead, this is the output of the current code:
+------------------------------------------------------------------------------------------------------------
+null
+com.company.Piece@66a29884
+null
+null
+null
+null
+null
+null
+
+null
+com.company.Piece@4769b07b
+null
+null
+null
+null
+null
+null
+
+com.company.Piece@cc34f4d
+com.company.Piece@17a7cec2
+com.company.Piece@65b3120a
+com.company.Piece@6f539caf
+com.company.Piece@79fc0f2f
+com.company.Piece@50040f0c
+com.company.Piece@2dda6444
+com.company.Piece@5e9f23b4
+
+com.company.Piece@4783da3f
+com.company.Piece@378fd1ac
+com.company.Piece@49097b5d
+com.company.Piece@6e2c634b
+com.company.Piece@37a71e93
+com.company.Piece@7e6cbb7a
+com.company.Piece@7c3df479
+com.company.Piece@7106e68e
+
+com.company.Piece@7eda2dbb
+com.company.Piece@6576fe71
+com.company.Piece@76fb509a
+com.company.Piece@300ffa5d
+com.company.Piece@1f17ae12
+com.company.Piece@4d405ef7
+com.company.Piece@6193b845
+com.company.Piece@2e817b38
+
+com.company.Piece@c4437c4
+com.company.Piece@433c675d
+com.company.Piece@3f91beef
+com.company.Piece@1a6c5a9e
+com.company.Piece@37bba400
+com.company.Piece@179d3b25
+com.company.Piece@254989ff
+com.company.Piece@5d099f62
+
+null
+com.company.Piece@37f8bb67
+null
+null
+null
+null
+null
+null
+
+null
+com.company.Piece@49c2faae
+null
+null
+null
+null
+null
+null
+---------------------------------------------------------------------------------------------------------------------
+A few issues with the unmodified code output:
+
+- Setting the front and back rows of the board is incorrect
+- It does not output the names of the piece as expected
+---> Also, if getName() is called on a null piece like above, an error occurs if other errors aren't accounted for first
+- the output of each name is on a separate line; it doesn't match the format as expected
+
+
+Other issues/possible issues:
+- No error handling is made when removing or placing a piece on unexpected square coordinates besides an x and y
+  value between 0-7
+
+- No default constructor has been made for the Square class; the 2D array is then unable to create empty Squares on
+  Line 30 of Board.java
+
+- Should the default constructor for Board call this.setBoard() upon creation
+--> What is the use of the ArrayLists
+
+- Are blank spaces supposed to be surrounded by Underscores(_) or hyphens (-) unlike regular pieces which are surrounded
+  by a hyphen(-)
