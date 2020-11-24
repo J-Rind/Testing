@@ -1,0 +1,22 @@
+Findings
+1. Show board doesn't display in the expected format from checkers example:
+========================The Board========================
+__0-0____R0-1___0-2____R0-3___0-4____R0-5___0-6____R0-7_
+__R1-0___1-1____R1-2___1-3____R1-4___1-5____R1-6___1-7__
+__2-0____2-1____2-2____R2-3___2-4____R2-5___2-6____R2-7_
+__3-0____3-1____W5-0___3-3____3-4____3-5____3-6____3-7__
+__4-0____4-1____4-2____4-3____4-4____4-5____4-6____4-7__
+__5-0____5-1____W5-2___5-3____W5-4___5-5____W5-6___5-7__
+__6-0____W6-1___6-2____W6-3___6-4____W6-5___6-6____W6-7_
+__W7-0___7-1____W7-2___7-3____W7-4___7-5____W7-6___7-7__
+
+2. Unable to use .getName method to retrieve the name of a piece:
+Exception in thread "main" java.lang.NullPointerException: Cannot invoke "com.company.Piece.getName()" because the
+return value of "com.company.Square.getPiece()" is null.
+	at com.company.Board.showBoard(Board.java:196)
+	at com.company.Main.main(Main.java:8)
+	Null object being created.
+Modified code System.out.println(squares[x][y].getPiece()); see comments on line 196.
+
+3. When setPieceOnSquare method is called for numbers out of bounds, an error is returned. Boundary checks should be in
+place for all code
