@@ -110,3 +110,7 @@ Other issues/possible issues:
 
 - (Formatting inconsistency/preference) Are blank spaces supposed to be surrounded by Underscores(_) or hyphens (-)
   unlike regular pieces which are surrounded by a hyphen(-)
+  
+*****Web edit: additional thoughts that may not be an error*****
+- Switch case statements can be simplified; similar case statements can be merged to tidy up code
+---> ex: rows 2-5 call the same method setBlanks(x)
