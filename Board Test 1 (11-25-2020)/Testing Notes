@@ -1,0 +1,27 @@
+1. Can not create object Board. (even after adding a piece class to the project)
+
+2. Board does not function properly due to there not being a default constructor in Square class.
+    Example:- public Square() { }
+    This would fix the initial errors related to the square class within the board class.
+
+2. The board is not displayed in proper format.
+
+3. ShowBoard() method displays the piece object but not in proper format.
+    It should be calling a getName() method from the piece class to display the name of that specific piece.
+    Example:- System.out.println(squares[x][y].getPiece().getName());
+
+4. When the getName method is used, it causes a NullPointerException.
+    Exception in thread "main" java.lang.NullPointerException
+    	at com.company.Board.showBoard(Board.java:208)
+    	at com.company.Main.main(Main.java:7)
+    This is caused because the getName method does not work for pieces whose value is null.
+
+5. BUG in the setFront and setBack methods in the board class within the for loops.
+    Currently, the loops in both the methods has the conditions (y=1,y<2,y++).
+    To properly assign values it should be (y=0, y<8, y++) to assign to eight objects in one row.
+
+6. Following the notes above should fix most of the bugs, however, the list(board) still prints in a vertical format instead of 8 rows and 8 columns.
+    This can be easily fixed by using 'print' instead of 'println' in line 208 of the showBoard() method within the Board class
+
+7. Even though the arrays are of size [8][8], there is no error handling in case the user tries to move to a nonexistent value such as [12, 52].
+    It should only allow users to move within the board to avoid the ArrayIndexOutOfBoundsException
