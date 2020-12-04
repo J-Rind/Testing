@@ -1,0 +1,9 @@
+Board test 2:
+1. No exception handling for users trying to remove a piece from a space that doesn't exist
+   Throws an array index out of bounds exception
+   Even though the arrays are of size [8][8], there is no error handling in case the user tries to move to a nonexistent value such as [12, 52].
+       It should only allow users to move within the board to avoid the ArrayIndexOutOfBoundsException
+       This error usually occurs while using setPieceOnSpace() or removePieceOnSquare() methods.
+       This can be fixed by adding an if statement similar to if(x<0 or x>7) { throw error message} else { // Do whatever the user wants };
+
+2. All other bugs from Board test 1 seems to have been fixed.
