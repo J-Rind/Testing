@@ -66,21 +66,17 @@ public abstract class Piece {
     } //function should change piece coordinates after error checking*/
 
 
-
-
     public abstract void getRange(ArrayList<Piece> arr); //return type tbd, function should return the current range of movement for each piece, assuming empty board
 
 
     public boolean kingCheck(){return true;} //returns if this move will place the current player's king in check.
+
 
     public void print(){
         System.out.println("Coordinate: (" + X + "," + Y + ")");
         System.out.println("isWhite: " + isWhite);
         System.out.println("Type: " + type);
         System.out.println("Status: " + isAlive);
-
-
-
     }
 
     public int getPiece(int dX, int dY,ArrayList<Piece> arr)

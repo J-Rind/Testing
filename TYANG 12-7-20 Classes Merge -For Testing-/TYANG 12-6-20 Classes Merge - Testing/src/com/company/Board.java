@@ -11,9 +11,9 @@ public class Board {
 
     //arraylist to store the black pieces
     ArrayList<Piece> blackPiece = new ArrayList<>();                    // TYANG - pieces are separate on Board
-    //arraylist to store the white pieces                               // would need to acknowledge this for pieces
+    //arraylist to store the white pieces                               // Would need to acknowledge this for pieces
     ArrayList<Piece> whitePiece = new ArrayList<>();                    // regarding range calculations/tracking
-                                                                        // can be used to our advantage to speed up loops
+                                                                        // can be used to our advantage to speed up checks
     //board constructor
     public Board(){
         this.setBoard();
@@ -198,6 +198,7 @@ public class Board {
         //gets passed coordinates to tell what square to remove piece from
         //makes new piece object
         Rook emptyPiece = new Rook(x,y,"____" + x + "-" + y + "____",false);
+        emptyPiece.setIsAlive(false);
         //sets the object as blank instead of as a piece
         //emptyPiece.setName("__" + x + "-" + y + "__");
         //sets the blank object to the specific square

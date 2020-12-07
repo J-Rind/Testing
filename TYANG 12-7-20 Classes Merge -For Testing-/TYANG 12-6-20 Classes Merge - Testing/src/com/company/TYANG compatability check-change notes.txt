@@ -2,27 +2,30 @@
 
 ArrayList:
     The Board class contains the arrays for both white and black pieces. This could be used to our advantage for range
-    calculations/checking since colors can tracked a bit more easily if need.
+    calculations/checking since colors can tracked a bit more easily if need for the Pieces class
 
-    OR
+    Interface code also utilizes this format for checking for wins/checkmates
+        *** Will most likely need to address a standard or at the very least how it will be implemented/used ***
 
-    Board class changes to align with pieces class with one array used
+    Pieces = uses only one ArrayList of pieces for tracking
 
-    Issues w/ ArrayList:
+    Issues w/ ArrayList currently for Board (if used):
         - No method for removing pieces from it currently
         - Pieces has a variable isAlive that could be used
-        - Without a working ArrayList, range checking is not possible
+        - Without a working ArrayList, range checking is not possible (make own for now as instructed)
 
 Compatibility Issues:
 
 Skeleton piece class in Board:
     - getName()/setName methods called in Board class -> need to change to getType()/setType()
-        + Values can also be passed on to make it easier to construct a specified piece anyways
+        + Constructor can take in values to declare these variables now anyways
     - String color -> now a boolean with isWhite() -> false = black, true = white (regards both Board and Sqaure classes)
-    - Piece is abstract, so now no empty Pieces can be made to fill empty the empty Squares
+    - Piece is abstract, so now no empty Pieces can be directly created to fill empty the empty Squares
+        + at the moment, most empty pieces or unfinished pieces = ROOK placeholder
 
-Unofficial Issues (not directly released to us):
+Unofficial Issues (gathered most recent code from Aiden-O's Branch, so it could be unfinished):
     - Other pieces were missing constructors
+        + just copied and pasted from existing piece classes with a constructor (King)
 
 
 
