@@ -25,7 +25,6 @@ I will conduct another test if there is an update in the code or once I receive 
 	The pawns I created to test the Knight Jump has similar issues. 
 
 
-
 Rook Test 2
 
 1. Can successfully create Rook Pieces. (CORRECT)
@@ -50,12 +49,14 @@ Rook Test 2
 
 4. Tested if the rook can not move to invalid coordinates (CORRECT)
 
-5. Tested to see if the rook can destroy other pieces. (NON FUNCTIONAL)
+5. Tested to see if the rook can destroy other pieces. (SEMI FUNCTIONAL)
             blackRook1.moveTo(0,3,blackKing,testPieces);
             blackKing.updateRange(testPieces);
             whiteRook1.moveTo(0,3,whiteKing,testPieces);
+	    blackRook1.setIsAlive(false);
             blackRook1.print();
             whiteRook1.print();
 
-            The isAlive status for both remained to 'true' after moving the white rook 1 to the black rook 1's coordinate.
-            The print() shows the same coordinates for both pieces now instead of removing the black rook and switching the isAlive to 'false'
+            I was able to switch the isAlive to false after moving a piece to a location of another piece of a different color.
+            The print() shows the same coordinates for both pieces but one of them shows up as being false after changing.
+	    This is something that may be done by another class such as board or interface. 
