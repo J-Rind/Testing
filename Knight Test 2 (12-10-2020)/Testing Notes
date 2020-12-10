@@ -43,6 +43,10 @@ Knight Test 1
             But the interesting thing is, I tried using a black pawn(1,1) for the white knight (1,0) and it seems to work fine.
             
             
+     UPDATE:-
+     THIS ISSUE WAS RESOLVED. 
+     
+            
 4. Tested to see if the knight can not move to invalid coordinates. (CORRECT)
 
 I will conduct another test if there is an update in the code or once I receive more details.
