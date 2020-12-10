@@ -14,7 +14,7 @@ Knight Test 1
 
     I tried using other coordinates for other Knights as well and were successful.
 
-3. Test if the piece can not jump over other pieces (SEMI FUNCTIONAL)
+3. Test if the piece can jump over other pieces (SEMI FUNCTIONAL)
     Ok, so this one is a little complicated.
     If a white piece jumps over another piece and tries to go back to its initial location it works.
     If a black piece tries to do just the same, it fails.
@@ -23,7 +23,8 @@ Knight Test 1
             Knight whiteKnight2 = new Knight(6,0,"WhiteKnight2",true);
             Knight blackKnight1 = new Knight(1,7,"BlackKnight1",false);
             Knight blackKnight2 = new Knight(6,7,"BlackKnight2",false);
-            Pawn blackPawn1 = new Pawn(6,6,"WhitePawn1",true);
+            Pawn blackPawn1 = new Pawn(6,6,"BlackPawn1",false);
+            // If I add another white pawn at (6,6), the black piece can jump over it moving forward (5,5), but not back to (6,7)
             Pawn whitePawn1 = new Pawn(1,1,"WhitePawn1",true);
             // All of the above pieces were then added to the array.
 
@@ -32,7 +33,32 @@ Knight Test 1
             However, the same black knight 2 is able to make those movements without the black pawn 2 existing.
 
             Please check this further and let me know if you make any changes.
+            
+            Details on the coordinates tried:-
+            Ok so here is what I tried:-
+            Put a black Knight at (6,7), Move it to (5,5) and back to (6,7) => Works fine
+            Put a BLACK pawn at (6,6). Move the BLACK KNIGHT at (6,7), Move it to (5,5) and back to (6,7) => Works fine
+            Put a WHITE pawn instead of a BLACK pawn at (6,6). Move the BLACK KNIGHT at (6,7), Move it to (5,5) and back to (6,7) => The program seems to go into an endless loop when I try this.
 
-4. Tested to see if the knight can move to invalid coordinates. (CORRECT)
+            But the interesting thing is, I tried using a black pawn(1,1) for the white knight (1,0) and it seems to work fine.
+            
+            
+     UPDATE:-
+     THIS ISSUE WAS RESOLVED. 
+     
+            
+4. Tested to see if the knight can not move to invalid coordinates. (CORRECT)
+
+5. Another issue detected in lines 43-50.
+    // 1-up/2-left
+        if(getPiece(X - 2, Y + 1, arr) == 0 || getPiece(X - 2, Y + 1, arr) == 0){
+            this.range.add(new int[] {X-2,Y+1});
+        }
+        // 2-up/1-left
+        if(getPiece(X - 1, Y + 2, arr) == 0 || getPiece(X - 1, Y + 2, arr) == 0){
+            this.range.add(new int[] {X-1,Y+2});
+        }
+        
+        Within both of these if conditions, one side should be == 0 and one should be == 1. 
 
 I will conduct another test if there is an update in the code or once I receive more details.
