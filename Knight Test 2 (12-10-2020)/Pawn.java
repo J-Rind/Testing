@@ -1,5 +1,4 @@
 package com.company;
-
 import java.util.ArrayList;
 
 
@@ -57,15 +56,15 @@ public class Pawn extends Piece {
         // Moving 2 spaces for first move
         if (pMove == 0){                //??If piece has not been moved
             if (this.getColor()) {
-                for (int x = X, y = Y + 1; y <= y + 2; y++) {
+                for (int x = X, y = Y + 1; y <= Y + 2; y++) {
                     if (getPiece(x, y, arr) == 0) {
                         this.range.add(new int[]{x, y});
                     } else if (getPiece(x, y, arr) == 1 || getPiece(x, y, arr) == 2) {
                         break;
                     }
                 }
-            }else if (this.getColor() == false) {
-                for (int x = X, y = Y; y <= y - 2; y-- ) {
+            }else if (!this.getColor()) {
+                for (int x = X, y = Y-1; y >= Y - 2; y-- ) {
                     if (getPiece(x, y, arr) == 0) {
                         this.range.add(new int[]{x, y});
                     } else if (getPiece(x, y, arr) == 1 || getPiece(x, y, arr) == 2) {

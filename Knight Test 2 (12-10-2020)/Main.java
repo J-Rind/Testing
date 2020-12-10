@@ -71,9 +71,9 @@ public class Main {
         testPieces.add(blackKnight2);
         blackKnight2.updateRange(testPieces);
 
-        Pawn blackPawn1 = new Pawn(6,6,"WhitePawn1",true);
-        testPieces.add(blackPawn1);
-        Pawn whitePawn1 = new Pawn(1,1,"WhitePawn1",true);
+        //Pawn blackPawn1 = new Pawn(6,6,"BlackPawn1",false);
+        //testPieces.add(blackPawn1);
+        Pawn whitePawn1 = new Pawn(6,6,"WhitePawn1",true);
         testPieces.add(whitePawn1);
 
         whiteKnight1.updateRange(testPieces);
