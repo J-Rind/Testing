@@ -7,7 +7,7 @@ Bishop Test 1
 2. When the bishop was created, the range is successfully set so it can only move to valid coordinates (CORRECT)
     Tested the white piece object (5,0) by moving it to an invalid coordinate (5,1), the piece was unable to move which is perfect.
 
-3. Tested to make sure the bishop can not jump over other pieces (CORRECT)
+3. Tested to make sure the bishop is restricted from jumping over other pieces (CORRECT)
     // Attempt to create conflicting moves (also checking if the piece can jump)
             blackBishop2.moveTo(7,2,blackKing,testPieces);
             whiteBishop1.moveTo(6,1, whiteKing, testPieces);
