@@ -33,6 +33,6 @@ Knight Test 1
 
             Please check this further and let me know if you make any changes.
 
-4. Tested to see if the knight can move to invalid coordinates. (CORRECT)
+4. Tested to see if the knight can not move to invalid coordinates. (CORRECT)
 
 I will conduct another test if there is an update in the code or once I receive more details.
