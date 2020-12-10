@@ -17,7 +17,7 @@ public class Main {
 
         // Need a king object for testing MoveTo method
         King whiteKing = new King(4,0,"King",true);
-        King blackKing = new King(4,7,"King",true);
+        King blackKing = new King(4,7,"King",false);
 
         // Add pieces to the array
         testPieces.add(whiteBishop1);
