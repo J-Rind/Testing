@@ -33,7 +33,16 @@ Knight Test 1
             However, the same black knight 2 is able to make those movements without the black pawn 2 existing.
 
             Please check this further and let me know if you make any changes.
+            
+            Details on the coordinates tried:-
+            Ok so here is what I tried:-
+            Put a black Knight at (6,7), Move it to (5,5) and back to (6,7) => Works fine
+            Put a BLACK pawn at (6,6). Move the BLACK KNIGHT at (6,7), Move it to (5,5) and back to (6,7) => Works fine
+            Put a WHITE pawn instead of a BLACK pawn at (6,6). Move the BLACK KNIGHT at (6,7), Move it to (5,5) and back to (6,7) => The program seems to go into an endless loop when I try this.
 
+            But the interesting thing is, I tried using a black pawn(1,1) for the white knight (1,0) and it seems to work fine.
+            
+            
 4. Tested to see if the knight can not move to invalid coordinates. (CORRECT)
 
 I will conduct another test if there is an update in the code or once I receive more details.
