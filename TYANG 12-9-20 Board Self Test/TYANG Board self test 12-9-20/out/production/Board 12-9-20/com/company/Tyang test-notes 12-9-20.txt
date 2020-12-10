@@ -1,0 +1,38 @@
+TYANG 12-10-20 12:15 AM self testing of Board code
+
+Issues:
+
+- Although remove piece has error checking for index range, set piece does not
+    + Could be problematic if the other teams do not account for this
+
+- Pawns required parameters to be created (unknown at the time though w/ easy fix -> similar to other pieces)
+
+- Unsure if saving/loading is implemented, but I don't believe it should attempt to write/read an entire ArrayList rather
+    than an object
+
+- showBoard() -> Does not function
+    + a "piece" needs to be declared when checking it's isAlive variable
+    + isAlive is private and needs to be accessed through piece.getAlive()
+    + null pieces cause an error when showing the board (if issues are fixed)
+        +++ ALSO: empty pieces are considered alive since that status is not set to false
+
+- Layout does not match the expected standard for chess
+****************************************OUTPUT OF FIXED CODE************************************************************
+
+--B-rk1-A-8---B-kn1-A-7---B-bi1-A-6---B-qu1-A-5---B-kg1-A-4---B-bi2-A-3---B-kn2-A-2---B-rk2-A-1-
+--Bpawn-B-8---Bpawn-B-7---Bpawn-B-6---Bpawn-B-5---Bpawn-B-4---Bpawn-B-3---Bpawn-B-2---Bpawn-B-1-
+____C--8________C--7________C--6________C--5________C--4________C--3________C--2________C--1____
+____D--8________D--7________D--6________D--5________D--4________D--3________D--2________D--1____
+____E--8________E--7________E--6________E--5________E--4________E--3________E--2________E--1____
+____F--8________F--7________F--6________F--5________F--4________F--3________F--2________F--1____
+--Wpawn-G-8---Wpawn-G-7---Wpawn-G-6---Wpawn-G-5---Wpawn-G-4---Wpawn-G-3---Wpawn-G-2---Wpawn-G-1-
+--W-rk1-H-8---W-kn1-H-7---W-bi1-H-6---W-qu1-H-5---W-kg1-H-4---W-bi2-H-3---W-kn2-H-2---W-rk2-H-1-
+
+Check "Expected Board.png" in files, Trevor's picture in General Chat on Discord from 12/8/20, or grading doc
+
+Output of current board =
+    (0,0) , (0,1) , (0,2) ... (0,7)
+    (1,0),  (1,1) , (1,2) ... (1,7)
+    This explains why A's are on top, and the Y value decreases
+
+    ...Maybe Ascii char values might work...
