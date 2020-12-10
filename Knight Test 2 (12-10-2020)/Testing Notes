@@ -1,0 +1,38 @@
+Knight Test 1
+
+1. Can successfully create pieces objects. (CORRECT)
+    Created two white and two black KNIGHT pieces objects.
+            Knight whiteKnight1 = new Knight(1,0,"WhiteKnight1",true);
+            Knight whiteKnight2 = new Knight(6,0,"WhiteKnight2",true);
+            Knight blackKnight1 = new Knight(1,7,"BlackKnight1",true);
+            Knight blackKnight2 = new Knight(6,7,"BlackKnight2",false);
+
+2. When the knight was created, the range is set correctly and the movements function as intended(CORRECT)
+
+    Knight whiteKnight1 = new Knight(1,0,"WhiteKnight1",true);
+    whiteKnight1.moveTo(2,2,whiteKing,testPieces);
+
+    I tried using other coordinates for other Knights as well and were successful.
+
+3. Test if the piece can not jump over other pieces (SEMI FUNCTIONAL)
+    Ok, so this one is a little complicated.
+    If a white piece jumps over another piece and tries to go back to its initial location it works.
+    If a black piece tries to do just the same, it fails.
+    I used the following coordinates:-
+            Knight whiteKnight1 = new Knight(1,0,"WhiteKnight1",true);
+            Knight whiteKnight2 = new Knight(6,0,"WhiteKnight2",true);
+            Knight blackKnight1 = new Knight(1,7,"BlackKnight1",false);
+            Knight blackKnight2 = new Knight(6,7,"BlackKnight2",false);
+            Pawn blackPawn1 = new Pawn(6,6,"WhitePawn1",true);
+            Pawn whitePawn1 = new Pawn(1,1,"WhitePawn1",true);
+            // All of the above pieces were then added to the array.
+
+            Now when the white Knight 1 tries to jump over the white pawn 1 and move to (2,2) and back to (1,0), it is successful
+            But when the black Knight 2 tries to jump over the black pawn 1 and move to (5,5) and back to (6,7), is is NOT successful.
+            However, the same black knight 2 is able to make those movements without the black pawn 2 existing.
+
+            Please check this further and let me know if you make any changes.
+
+4. Tested to see if the knight can move to invalid coordinates. (CORRECT)
+
+I will conduct another test if there is an update in the code or once I receive more details.
