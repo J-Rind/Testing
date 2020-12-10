@@ -7,9 +7,9 @@ Piece AND Rook test 1
     Board class is creating pieces by creating a piece object and using a .setName() method.
     While the pieces are designed to be created using their own classes such as Rook.java and objects intended to be created using coordinates and colors.
 
-3. ERROR in current state partially due to the piece class being an abstract class and the getRange function being abstract as well but not implemented yet.
+3. ERROR in current state partially due to the piece class being an abstract class and the getRange function being abstract as well but not implemented by the board yet.
 
-4. Did not see a way for the board class to print the pieces objects.
+4. Did not see a way for the board class to print the pieces objects. They are currently using .getPiece().getName() method.
 
 5. The board class seems to create two different arrays for Black and White pieces.
     However, the pieces class/Rook is designed to add all pieces into a single array and add an extra field to the Piece/Rook object that determines if the piece is white.
