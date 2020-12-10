@@ -1,0 +1,158 @@
+Tyang notes on pieces 12-9-20
+
+Output of all pieces' range, names, and current position WITHOUT PAWNS:
+
+wRook1 - Current position: 0, 0
+Range/available moves:
+(0,1) (0,2) (0,3) (0,4) (0,5) (0,6) (0,7)
+---------------------------------------------------------------------------------
+wRook2 - Current position: 7, 0
+Range/available moves:
+(7,1) (7,2) (7,3) (7,4) (7,5) (7,6) (7,7)
+---------------------------------------------------------------------------------
+wKnight1 - Current position: 1, 0
+Range/available moves:
+(1,0) (1,0) (1,0) (1,0) (1,0) (1,0) (1,0) (1,0)
+---------------------------------------------------------------------------------
+wKnight2 - Current position: 6, 0
+Range/available moves:
+(6,0) (6,0) (6,0) (6,0) (6,0) (6,0) (6,0) (6,0)
+---------------------------------------------------------------------------------
+wBishop1 - Current position: 2, 0
+Range/available moves:
+(3,1) (4,2) (5,3) (6,4) (7,5) (1,1) (0,2)
+---------------------------------------------------------------------------------
+wBishop2 - Current position: 5, 0
+Range/available moves:
+(6,1) (7,2) (4,1) (3,2) (2,3) (1,4) (0,5)
+---------------------------------------------------------------------------------
+wKing - Current position: 4, 0
+Range/available moves:
+(4,1) (5,1) (5,-1) (4,-1) (3,-1) (3,1)
+---------------------------------------------------------------------------------
+wQueen - Current position: 3, 0
+Range/available moves:
+(3,1) (3,2) (3,3) (3,4) (3,5) (3,6) (3,7) (4,1) (5,2) (6,3) (7,4) (2,1) (1,2) (0,3)
+---------------------------------------------------------------------------------
+bRook1 - Current position: 0, 7
+Range/available moves:
+(0,6) (0,5) (0,4) (0,3) (0,2) (0,1) (0,0)
+---------------------------------------------------------------------------------
+bRook2 - Current position: 7, 7
+Range/available moves:
+(7,6) (7,5) (7,4) (7,3) (7,2) (7,1) (7,0)
+---------------------------------------------------------------------------------
+bKnight1 - Current position: 1, 7
+Range/available moves:
+(1,7) (1,7) (3,6) (1,7) (1,7) (1,7) (1,7) (1,7)
+---------------------------------------------------------------------------------
+bKnight2 - Current position: 6, 7
+Range/available moves:
+(6,7) (6,7) (8,6) (6,7) (6,7) (6,7) (6,7) (6,7)
+---------------------------------------------------------------------------------
+bBishop1 - Current position: 2, 7
+Range/available moves:
+(3,6) (4,5) (5,4) (6,3) (7,2) (1,6) (0,5)
+---------------------------------------------------------------------------------
+bBishop2 - Current position: 5, 7
+Range/available moves:
+(6,6) (7,5) (4,6) (3,5) (2,4) (1,3) (0,2)
+---------------------------------------------------------------------------------
+bKing - Current position: 4, 7
+Range/available moves:
+(4,8) (5,8) (5,6) (4,6) (3,6) (3,8)
+---------------------------------------------------------------------------------
+bQueen - Current position: 3, 7
+Range/available moves:
+(3,6) (3,5) (3,4) (3,3) (3,2) (3,1) (3,0) (4,6) (5,5) (6,4) (7,3) (2,6) (1,5) (0,4)
+---------------------------------------------------------------------------------
+
+Issues w/o Pawns:
+
+- Knight updates it's range with it's current position rather than the coordinates of the squares checked
+    + with this, it's possible for it to "move onto it's own position"
+    + movement is also error prone since it includes invalid spaces as it included more than 2 coordinates (just 0,2 and 2,2 expected)
+        ex:Knight on (1,0) will have (3,-1) as an array coordinates within it's range if correct
+        *** MODIFICATION FOR TEST CAUSES (3,-1) TO SHOW IF USING THIS PROJECT***
+
+- King is capable of moving to an unintended coordinate as well as they are included in the range (similar to Knight)
+    ex: wKing on (4,0) can move to (5,-1)
+
+
+
+Outcome of when adding pawns into the mix:
+---------------------------------------------------------------------------------
+wPawn1 - Current position: 0, 1
+Range/available moves:
+(0,2) (0,3) (0,4) (0,5)
+---------------------------------------------------------------------------------
+wPawn2 - Current position: 1, 1
+Range/available moves:
+(1,2) (1,3) (1,4) (1,5)
+---------------------------------------------------------------------------------
+wPawn3 - Current position: 2, 1
+Range/available moves:
+(2,2) (2,3) (2,4) (2,5)
+---------------------------------------------------------------------------------
+wPawn4 - Current position: 3, 1
+Range/available moves:
+(3,2) (3,3) (3,4) (3,5)
+---------------------------------------------------------------------------------
+wPawn5 - Current position: 4, 1
+Range/available moves:
+(4,2) (4,3) (4,4) (4,5)
+---------------------------------------------------------------------------------
+wPawn6 - Current position: 5, 1
+Range/available moves:
+(5,2) (5,3) (5,4) (5,5)
+---------------------------------------------------------------------------------
+wPawn7 - Current position: 6, 1
+Range/available moves:
+(6,2) (6,3) (6,4) (6,5)
+---------------------------------------------------------------------------------
+wPawn8 - Current position: 7, 1
+Range/available moves:
+(7,2) (7,3) (7,4) (7,5)
+---------------------------------------------------------------------------------
+bPawn1 - Current position: 0, 6
+Range/available moves:
+
+---------------------------------------------------------------------------------
+bPawn2 - Current position: 1, 6
+Range/available moves:
+
+---------------------------------------------------------------------------------
+bPawn3 - Current position: 2, 6
+Range/available moves:
+
+---------------------------------------------------------------------------------
+bPawn4 - Current position: 3, 6
+Range/available moves:
+
+---------------------------------------------------------------------------------
+bPawn5 - Current position: 4, 6
+Range/available moves:
+
+---------------------------------------------------------------------------------
+bPawn6 - Current position: 5, 6
+Range/available moves:
+
+---------------------------------------------------------------------------------
+bPawn7 - Current position: 6, 6
+Range/available moves:
+
+---------------------------------------------------------------------------------
+bPawn8 - Current position: 7, 6
+Range/available moves:
+
+---------------------------------------------------------------------------------
+
+Issues w/ Pawns:
+First Moves -
+    - Black pawns have no valid moves with it's current getRange (Issues w/ conditions in for loop)
+    - White pawns have TOO many valid moves with it's current getRange (Issues w/ conditions in for loop as well)
+        + hint: I would suggest not naming two variable y and Y
+
+Pawns in general
+    - When not moving for the first time, the range is incorrect, similar to Knight
+        ex: if wPawn1 is on (0,3)
