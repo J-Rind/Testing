@@ -9,6 +9,73 @@ public class Main {
         // Test array
         ArrayList<Piece> testPieces = new ArrayList<Piece>();
 
+        // Create rook pieces
+        Rook whiteRook1 = new Rook(0,0,"White Rook 1", true);
+        Rook whiteRook2 = new Rook(7,0,"White Rook 2", true);
+        Rook blackRook1 = new Rook(0,7,"Black Rook 1", false);
+        Rook blackRook2 = new Rook(7,7,"Black Rook 2", false);
+
+        whiteRook1.updateRange(testPieces);
+        whiteRook2.updateRange(testPieces);
+        blackRook1.updateRange(testPieces);
+        blackRook2.updateRange(testPieces);
+
+
+        // Need a king object for testing MoveTo method
+        King whiteKing = new King(4,0,"King",true);
+        King blackKing = new King(4,7,"King",false);
+        whiteKing.updateRange(testPieces);
+        blackKing.updateRange(testPieces);
+
+
+        testPieces.add(whiteRook1);
+        testPieces.add(whiteRook2);
+        testPieces.add(blackRook1);
+        testPieces.add(blackRook2);
+        testPieces.add(whiteKing);
+        testPieces.add(blackKing);
+
+        // NOT expected to move
+        whiteRook1.moveTo(1,1,whiteKing,testPieces);
+
+        // Expected to move since the board is empty and only contains the Rooks(not working)
+        whiteRook1.moveTo(0,3,whiteKing,testPieces);
+        blackRook1.moveTo(0,5,blackKing,testPieces);
+
+        // Move the pieces back
+        whiteRook1.moveTo(0,0,whiteKing,testPieces);
+
+        whiteRook1.moveTo(0,2,whiteKing,testPieces);
+        whiteRook1.moveTo(0,0,whiteKing,testPieces);
+
+        blackRook1.moveTo(0,3,blackKing,testPieces);
+        blackKing.updateRange(testPieces);
+
+        whiteRook1.moveTo(0,3,whiteKing,testPieces);
+
+        blackRook1.print();
+        whiteRook1.print();
+
+        Knight whiteKnight1 = new Knight(1,0,"WhiteKnight1",true);
+        Knight whiteKnight2 = new Knight(6,0,"WhiteKnight2",true);
+        Knight blackKnight1 = new Knight(1,7,"BlackKnight1",false);
+        Knight blackKnight2 = new Knight(6,7,"BlackKnight2",false);
+
+        testPieces.add(whiteKnight1);
+        whiteKnight1.updateRange(testPieces);
+        testPieces.add(whiteKnight2);
+        whiteKnight2.updateRange(testPieces);
+        testPieces.add(blackKnight1);
+        blackKnight1.updateRange(testPieces);
+        testPieces.add(blackKnight2);
+        blackKnight2.updateRange(testPieces);
+
+        blackKnight2.moveTo(5,5,blackKing,testPieces);
+
+        /*
+        // Test array
+        ArrayList<Piece> testPieces = new ArrayList<Piece>();
+
         Knight whiteKnight1 = new Knight(1,0,"WhiteKnight1",true);
         Knight whiteKnight2 = new Knight(6,0,"WhiteKnight2",true);
         Knight blackKnight1 = new Knight(1,7,"BlackKnight1",true);

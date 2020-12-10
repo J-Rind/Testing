@@ -35,16 +35,27 @@ Rook Test 2
             Rook blackRook1 = new Rook(0,7,"Black Rook 1", false);
             Rook blackRook2 = new Rook(7,7,"Black Rook 2", false);
 
-2. When the rook is created, the range is NOT set correctly since the movements don't function as intended (NON FUNCTIONAL)
+2. When the rook is created, the range is set correctly and the movements function as intended (CORRECT)
 
-    // Expected to move (not working)
+    // Expected to move
             whiteRook1.moveTo(0,3,whiteKing,testPieces);
             blackRook1.moveTo(3,7,blackKing,testPieces);
             blackRook1.moveTo(0,5,blackKing,testPieces);
 
-3. Unable to test if the pieces can not jump over pieces (NON FUNCTIONAL)
-    Since the rook is unable to move, can not confirm to make sure the Rook is unable to jump over other pieces.
-    Also tried using INCORRECT coordinates for testing purposes but no movement found.
-    The issue would possible be with the range function not working properly.
-	
-I will conduct another test if there is an update in the code or once I receive more details.
+    // Not expected to move
+            whiteRook1.moveTo(-1,0,whiteKing,testPieces);
+
+3. Tested if the rook was restricted from jumping over other pieces (CORRECT)
+    The rook was unable to jump over other pieces which is how it should be.
+
+4. Tested if the rook can not move to invalid coordinates (CORRECT)
+
+5. Tested to see if the rook can destroy other pieces. (NON FUNCTIONAL)
+            blackRook1.moveTo(0,3,blackKing,testPieces);
+            blackKing.updateRange(testPieces);
+            whiteRook1.moveTo(0,3,whiteKing,testPieces);
+            blackRook1.print();
+            whiteRook1.print();
+
+            The isAlive status for both remained to 'true' after moving the white rook 1 to the black rook 1's coordinate.
+            The print() shows the same coordinates for both pieces now instead of removing the black rook and switching the isAlive to 'false'
