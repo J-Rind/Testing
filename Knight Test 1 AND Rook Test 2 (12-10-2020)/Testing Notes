@@ -45,6 +45,6 @@ Rook Test 2
 3. Unable to test if the pieces is restricted from jumping over pieces (NON FUNCTIONAL)
     Since the rook is unable to move, can not confirm to make sure the Rook is unable to jump over other pieces.
     Also tried using INCORRECT coordinates for testing purposes but no movement found.
-    The issue would possible be with the range function not working properly.
+    The issue might possibly be with the range function not working properly.
 	
 I will conduct another test if there is an update in the code or once I receive more details.
