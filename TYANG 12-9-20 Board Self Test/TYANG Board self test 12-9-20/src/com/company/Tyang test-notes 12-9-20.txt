@@ -33,8 +33,5 @@ Output of current board =
     (1,0),  (1,1) , (1,2) ... (1,7)
     This explains why A's are on top, and the Y value decreases
 
-    ...Maybe Ascii char values might work...
-
-
 
 ***** No comments on saving/loading (A Grade)
