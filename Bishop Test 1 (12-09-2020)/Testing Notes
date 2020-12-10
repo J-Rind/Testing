@@ -17,7 +17,7 @@ Bishop Test 1
             blackBishop2.moveTo(5,0,blackKing,testPieces);
             whiteBishop1.moveTo(5,0, whiteKing, testPieces);
 
-4. Tried to destroy a piece using another piece but it was unsuccessful (INCORRECT)
+4. Tried to destroy a piece using another piece but it was unsuccessful (NON FUNCTIONAL)
     whiteBishop1.moveTo(5,0, whiteKing, testPieces);
     blackBishop2.moveTo(7,2,blackKing,testPieces);
     blackBishop2.moveTo(5,0,blackKing,testPieces);
