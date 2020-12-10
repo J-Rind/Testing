@@ -21,11 +21,13 @@ Bishop Test 1
     whiteBishop1.moveTo(5,0, whiteKing, testPieces);
     blackBishop2.moveTo(7,2,blackKing,testPieces);
     blackBishop2.moveTo(5,0,blackKing,testPieces);
+    whiteBishop1.setIsAlive(false);
             whiteBishop1.print();
             blackBishop2.print();
 
-    Even though the moves were successful, the isAlive status for both the pieces remained 'true' instead of one being 'false'
-    Not sure if the isAlive status is to be determined by another class or not.
+    I was able to switch the isAlive to false after moving a piece to a location of another piece of a different color.
+            The print() shows the same coordinates for both pieces but one of them shows up as being false after changing.
+	    This is something that may be done by another class such as board or interface. 
 
 Everything else with the bishop class seems to be working fine. See Main.java to see how the tests were conducted.
 
