@@ -9,6 +9,46 @@ public class Main {
         // Test array
         ArrayList<Piece> testPieces = new ArrayList<Piece>();
 
+        Knight whiteKnight1 = new Knight(1,0,"WhiteKnight1",true);
+        Knight whiteKnight2 = new Knight(6,0,"WhiteKnight2",true);
+        Knight blackKnight1 = new Knight(1,7,"BlackKnight1",true);
+        Knight blackKnight2 = new Knight(6,7,"BlackKnight2",false);
+
+
+        Bishop whiteBishop1 = new Bishop(5,0,"WhiteBishop1",true);
+
+        // Need a king object for testing MoveTo method
+        King whiteKing = new King(4,0,"King",true);
+        King blackKing = new King(4,7,"King",false);
+
+        // Trying to move a knight again
+        whiteKnight1.moveTo(0,2,whiteKing,testPieces);
+
+        // Try to move a knight BEFORE creating a pawn
+        whiteKnight1.moveTo(2,2,whiteKing,testPieces);
+
+        // Trying to move a Knight to an INCORRECT coordinate
+        // INCORRECT coordinate test, whiteKnight1.moveTo(1,1,whiteKing,testPieces);
+
+        // Create a pawn to test if the knight can jump
+        Pawn whitePawn1 = new Pawn(1,1,"WhitePawn1",true);
+        whitePawn1.moveTo(1,3,whiteKing,testPieces);
+        Pawn whitePawn2 = new Pawn(6,1,"WhitePawn2",true);
+
+        Pawn whitePawn3 = new Pawn(2,1,"WhitePawn2",true);
+        whitePawn3.moveTo(2,3,whiteKing,testPieces);
+
+        // Test if the Knight can JUMP
+        whiteKnight1.moveTo(2,2,whiteKing,testPieces);
+
+        // Test if the knight can move to an invalid location
+        whiteKnight1.moveTo(1,2,whiteKing,testPieces);
+
+        // whiteBishop1.moveTo(7,2,whiteKing,testPieces);
+
+
+
+        /*
         // Create the pieces objects
         Bishop whiteBishop1 = new Bishop(5,0,"WhiteBishop1",true);
         Bishop whiteBishop2 = new Bishop(2,0,"WhiteBishop2",true);
@@ -31,8 +71,6 @@ public class Main {
 
         // Expected to move
         whiteBishop1.moveTo(6,1, whiteKing, testPieces);
-        whiteBishop1.getRange();
-        whiteBishop1.moveTo(5,2, whiteKing, testPieces);
 
         // Not expected to move
         whiteBishop1.moveTo(5,1, whiteKing, testPieces);

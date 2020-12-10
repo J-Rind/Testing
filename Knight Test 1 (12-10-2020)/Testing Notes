@@ -1,0 +1,24 @@
+Knight Test 1
+
+
+1. Can successfully create pieces objects. (CORRECT)
+    Created two white and two black KNIGHT pieces objects.
+            Knight whiteKnight1 = new Knight(1,0,"WhiteKnight1",true);
+            Knight whiteKnight2 = new Knight(6,0,"WhiteKnight2",true);
+            Knight blackKnight1 = new Knight(1,7,"BlackKnight1",true);
+            Knight blackKnight2 = new Knight(6,7,"BlackKnight2",false);
+
+2. When the knight was created, the range is NOT set correctly since the movements don't function as intended (NON FUNCTIONAL)
+
+    Knight whiteKnight1 = new Knight(1,0,"WhiteKnight1",true);
+    whiteKnight1.moveTo(2,2,whiteKing,testPieces);
+
+    The above code should move the Knight to the location but it fails.
+    I tried using other coordinates for other Knights as well but they failed to function correctly.
+
+3. Unable to test if the piece can jump over other pieces (NON FUNCTIONAL)
+    Since the knight is unable to move, can not confirm if it works as intended.
+
+I will conduct another test if there is an update in the code or once I receive more details.
+    For now, the knight doesn't move as intended.
+    In fact, I even tried using INCORRECT coordinates for a knight such as only one step forward but it still fails to move.
