@@ -1,6 +1,5 @@
 Knight Test 1
 
-
 1. Can successfully create pieces objects. (CORRECT)
     Created two white and two black KNIGHT pieces objects.
             Knight whiteKnight1 = new Knight(1,0,"WhiteKnight1",true);
@@ -24,3 +23,28 @@ I will conduct another test if there is an update in the code or once I receive 
     In fact, I even tried using INCORRECT coordinates for a knight such as only one step forward but it still fails to move.
 	
 	The pawns I created to test the Knight Jump has similar issues. 
+
+
+
+Rook Test 2
+
+1. Can successfully create Rook Pieces. (CORRECT)
+    Created two white and two black Rook pieces objects.
+            Rook whiteRook1 = new Rook(0,0,"White Rook 1", true);
+            Rook whiteRook2 = new Rook(7,0,"White Rook 2", true);
+            Rook blackRook1 = new Rook(0,7,"Black Rook 1", false);
+            Rook blackRook2 = new Rook(7,7,"Black Rook 2", false);
+
+2. When the rook is created, the range is NOT set correctly since the movements don't function as intended (NON FUNCTIONAL)
+
+    // Expected to move (not working)
+            whiteRook1.moveTo(0,3,whiteKing,testPieces);
+            blackRook1.moveTo(3,7,blackKing,testPieces);
+            blackRook1.moveTo(0,5,blackKing,testPieces);
+
+3. Unable to test if the pieces can not jump over pieces (NON FUNCTIONAL)
+    Since the rook is unable to move, can not confirm to make sure the Rook is unable to jump over other pieces.
+    Also tried using INCORRECT coordinates for testing purposes but no movement found.
+    The issue would possible be with the range function not working properly.
+	
+I will conduct another test if there is an update in the code or once I receive more details.

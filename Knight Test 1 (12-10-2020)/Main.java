@@ -15,11 +15,25 @@ public class Main {
         Knight blackKnight2 = new Knight(6,7,"BlackKnight2",false);
 
 
+        // Create rook pieces
+        Rook whiteRook1 = new Rook(0,0,"White Rook 1", true);
+        Rook whiteRook2 = new Rook(7,0,"White Rook 2", true);
+        Rook blackRook1 = new Rook(0,7,"Black Rook 1", false);
+        Rook blackRook2 = new Rook(7,7,"Black Rook 2", false);
+
+
         Bishop whiteBishop1 = new Bishop(5,0,"WhiteBishop1",true);
 
         // Need a king object for testing MoveTo method
         King whiteKing = new King(4,0,"King",true);
         King blackKing = new King(4,7,"King",false);
+
+        // NOT expected to move
+        whiteRook1.moveTo(1,1,whiteKing,testPieces);
+
+        // Expected to move since the board is empty and only contains the Rooks(not working)
+        whiteRook1.moveTo(0,3,whiteKing,testPieces);
+        blackRook1.moveTo(0,5,blackKing,testPieces);
 
         // Trying to move a knight again
         whiteKnight1.moveTo(0,2,whiteKing,testPieces);
