@@ -24,7 +24,7 @@ Knight Test 1
             Knight blackKnight1 = new Knight(1,7,"BlackKnight1",false);
             Knight blackKnight2 = new Knight(6,7,"BlackKnight2",false);
             Pawn blackPawn1 = new Pawn(6,6,"BlackPawn1",false);
-            // If I add another pawn of a different color at (6,6), the black piece can jump over it moving forward (5,5), but not back to (6,7)
+            // If I add another white pawn at (6,6), the black piece can jump over it moving forward (5,5), but not back to (6,7)
             Pawn whitePawn1 = new Pawn(1,1,"WhitePawn1",true);
             // All of the above pieces were then added to the array.
 
