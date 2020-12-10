@@ -23,7 +23,7 @@ Knight Test 1
             Knight whiteKnight2 = new Knight(6,0,"WhiteKnight2",true);
             Knight blackKnight1 = new Knight(1,7,"BlackKnight1",false);
             Knight blackKnight2 = new Knight(6,7,"BlackKnight2",false);
-            Pawn blackPawn1 = new Pawn(6,6,"WhitePawn1",true);
+            Pawn blackPawn1 = new Pawn(6,6,"WhitePawn1",false);
             Pawn whitePawn1 = new Pawn(1,1,"WhitePawn1",true);
             // All of the above pieces were then added to the array.
 
