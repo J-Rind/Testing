@@ -49,4 +49,16 @@ Knight Test 1
             
 4. Tested to see if the knight can not move to invalid coordinates. (CORRECT)
 
+5. Another issue detected in lines 43-50.
+    // 1-up/2-left
+        if(getPiece(X - 2, Y + 1, arr) == 0 || getPiece(X - 2, Y + 1, arr) == 0){
+            this.range.add(new int[] {X-2,Y+1});
+        }
+        // 2-up/1-left
+        if(getPiece(X - 1, Y + 2, arr) == 0 || getPiece(X - 1, Y + 2, arr) == 0){
+            this.range.add(new int[] {X-1,Y+2});
+        }
+        
+        Within both of these if conditions, one side should be == 0 and one should be == 1. 
+
 I will conduct another test if there is an update in the code or once I receive more details.
