@@ -22,5 +22,5 @@ Knight Test 1
 I will conduct another test if there is an update in the code or once I receive more details.
     For now, the knight doesn't move as intended.
     In fact, I even tried using INCORRECT coordinates for a knight such as only one step forward but it still fails to move.
-	
-	The pawns I created to test the Knight Jump has similar issues. 
+    
+    The pawns I created to test the Knight Jump has similar issues. 
