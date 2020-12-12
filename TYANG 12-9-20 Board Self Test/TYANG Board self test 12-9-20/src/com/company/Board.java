@@ -116,47 +116,62 @@ public class Board implements Serializable {
         char ycord = 0;
 
         for(int y = 0; y < 8; y++){
-
+            switch (y){                                           // TYANG xcord is based on y of square
+                case 7:
+                    xcord = 'H';                                  // changed
+                    break;
+                case 6:
+                    xcord = 'G';
+                    break;
+                case 5:
+                    xcord = 'F';
+                    break;
+                case 4:
+                    xcord = 'E';
+                case 3:
+                    xcord = 'D';
+                    break;
+                case 2:
+                    xcord = 'C';
+                    break;
+                case 1:
+                    xcord = 'B';
+                    break;
+                case 0:
+                    xcord = 'A';
+                    break;
+            }
             if (row == 0)                                     //TYANG should be based on the X rather than y
             {
                 ycord = '8';
-                xcord = 'H';                                  // MERGED IF STATEMENTS ->
             }
             if (row == 1)
             {
                 ycord = '7';
-                xcord = 'G';
             }
             if (row == 2)
             {
                 ycord = '6';
-                xcord = 'F';
             }
             if (row == 3)
             {
                 ycord = '5';
-                xcord = 'E';
             }
             if (row == 4)
             {
                 ycord = '4';
-                xcord = 'D';
             }
             if (row == 5)
             {
                 ycord = '3';
-                xcord = 'C';
             }
             if (row == 6)
             {
                 ycord = '2';
-                xcord = 'B';
             }
             if (row == 7)
             {
                 ycord = '1';
-                xcord = 'A';
-
             }
 
                                                 // TYANG Pawns need to be created like other pieces (UNKOWN AT THE TIME)
@@ -187,46 +202,65 @@ public class Board implements Serializable {
         //the order of the back row is rook, knight, bishop, queen, king, bishop, knight, rook, from left to right
         //so we used a switch to build each specific piece as the for loop iterates through each square
         for(int y = 0; y < 8; y++){
+            switch (y){                                           // TYANG xcord is based on y of square
+                case 7:
+                    xcord = 'H';                                  // changed
+                    break;
+                case 6:
+                    xcord = 'G';
+                    break;
+                case 5:
+                    xcord = 'F';
+                    break;
+                case 4:
+                    xcord = 'E';
+                case 3:
+                    xcord = 'D';
+                    break;
+                case 2:
+                    xcord = 'C';
+                    break;
+                case 1:
+                    xcord = 'B';
+                    break;
+                case 0:
+                    xcord = 'A';
+                    break;
+            }
 
             if (row == 0)                                     //TYANG should be based on the X rather than y
             {
                 ycord = '8';
-                xcord = 'H';                                  // MERGED IF STATEMENTS ->
+
             }
             if (row == 1)
             {
                 ycord = '7';
-                xcord = 'G';
             }
             if (row == 2)
             {
                 ycord = '6';
-                xcord = 'F';
+
             }
             if (row == 3)
             {
                 ycord = '5';
-                xcord = 'E';
             }
             if (row == 4)
             {
                 ycord = '4';
-                xcord = 'D';
             }
             if (row == 5)
             {
                 ycord = '3';
-                xcord = 'C';
             }
             if (row == 6)
             {
                 ycord = '2';
-                xcord = 'B';
             }
             if (row == 7)
             {
                 ycord = '1';
-                xcord = 'A';
 
             }
 
@@ -297,45 +331,63 @@ public class Board implements Serializable {
 
         for(int y = 0; y < 8; y++) {
 
+            switch (y){                                           // TYANG xcord is based on y of square
+                case 7:
+                    xcord = 'H';                                  // changed
+                    break;
+                case 6:
+                    xcord = 'G';
+                    break;
+                case 5:
+                    xcord = 'F';
+                    break;
+                case 4:
+                    xcord = 'E';
+                case 3:
+                    xcord = 'D';
+                    break;
+                case 2:
+                    xcord = 'C';
+                    break;
+                case 1:
+                    xcord = 'B';
+                    break;
+                case 0:
+                    xcord = 'A';
+                    break;
+            }
+
             if (row == 0)                                     //TYANG should be based on the X rather than y
             {
                 ycord = '8';
-                xcord = 'H';                                  // MERGED IF STATEMENTS ->
             }
             if (row == 1)
             {
                 ycord = '7';
-                xcord = 'G';
             }
             if (row == 2)
             {
                 ycord = '6';
-                xcord = 'F';
             }
             if (row == 3)
             {
                 ycord = '5';
-                xcord = 'E';
             }
             if (row == 4)
             {
                 ycord = '4';
-                xcord = 'D';
             }
             if (row == 5)
             {
                 ycord = '3';
-                xcord = 'C';
             }
             if (row == 6)
             {
                 ycord = '2';
-                xcord = 'B';
             }
             if (row == 7)
             {
                 ycord = '1';
-                xcord = 'A';
 
             }
 
@@ -379,71 +431,64 @@ public class Board implements Serializable {
 
         char xcord = 0;
         char ycord = 0;
+        switch (y){                                           // TYANG xcord is based on y of square
+            case 1:
+                xcord = 'H';                                  // changed
+                break;
+            case 2:
+                xcord = 'G';
+                break;
+            case 3:
+                xcord = 'F';
+                break;
+            case 4:
+                xcord = 'E';
+            case 5:
+                xcord = 'D';
+                break;
+            case 6:
+                xcord = 'C';
+                break;
+            case 7:
+                xcord = 'B';
+                break;
+            case 8:
+                xcord = 'A';
+                break;
 
-        if (x == 0)
+        }
+        if (x == 0)                                     //TYANG should be based on the X rather than y
         {
-            xcord = 'A';
+            ycord = '8';
         }
         if (x == 1)
         {
-            xcord = 'B';
+            ycord = '7';
         }
         if (x == 2)
         {
-            xcord = 'C';
+            ycord = '6';
         }
-        if (x == 3)
-        {
-            xcord = 'D';
-        }
-        if (x == 4)
-        {
-            xcord = 'E';
-        }
-        if (x == 5)
-        {
-            xcord = 'F';
-        }
-        if (x == 6)
-        {
-            xcord = 'G';
-        }
-        if (x == 7)
-        {
-            xcord = 'H';
-        }
-
-        if (y == 0)
-        {
-            ycord = '1';
-        }
-        if (y == 1)
-        {
-            ycord = '2';
-        }
-        if (y == 2)
-        {
-            ycord = '3';
-        }
-        if (y == 3)
-        {
-            ycord = '4';
-        }
-        if (y == 4)
+        if (x== 3)
         {
             ycord = '5';
         }
-        if (y == 5)
+        if (x == 4)
         {
-            ycord = '6';
+            ycord = '4';
         }
-        if (y == 6)
+        if (x == 5)
         {
-            ycord = '7';
+            ycord = '3';
         }
-        if (y == 7)
+        if (x == 6)
         {
-            ycord = '8';
+            ycord = '2';
+        }
+        if (x == 7)
+        {
+            ycord = '1';
+
         }
 
         try {

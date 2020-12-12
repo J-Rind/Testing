@@ -66,6 +66,7 @@ bQueen - Current position: 3, 7
 Range/available moves:
 (3,6) (3,5) (3,4) (3,3) (3,2) (3,1) (3,0) (4,6) (5,5) (6,4) (7,3) (2,6) (1,5) (0,4)
 ---------------------------------------------------------------------------------
+************************************************************************************************************************
 
 Issues w/o Pawns:
 
@@ -78,9 +79,71 @@ Issues w/o Pawns:
 - King is capable of moving to an unintended coordinate as well as they are included in the range (similar to Knight)
     ex: wKing on (4,0) can move to (5,-1)
 
-
-
+************************************************************************************************************************
 Outcome of when adding pawns into the mix:
+wRook1 - Current position: 0, 0
+Range/available moves:
+
+---------------------------------------------------------------------------------
+wRook2 - Current position: 7, 0
+Range/available moves:
+
+---------------------------------------------------------------------------------
+wKnight1 - Current position: 1, 0
+Range/available moves:
+(1,0) (1,0) (3,-1) (1,0) (1,0) (1,0) (1,0) (1,0)
+---------------------------------------------------------------------------------
+wKnight2 - Current position: 6, 0
+Range/available moves:
+(6,0) (6,0) (8,-1) (6,0) (6,0) (6,0) (6,0)
+---------------------------------------------------------------------------------
+wBishop1 - Current position: 2, 0
+Range/available moves:
+
+---------------------------------------------------------------------------------
+wBishop2 - Current position: 5, 0
+Range/available moves:
+
+---------------------------------------------------------------------------------
+wKing - Current position: 4, 0
+Range/available moves:
+(5,-1) (4,-1) (3,-1)
+---------------------------------------------------------------------------------
+wQueen - Current position: 3, 0
+Range/available moves:
+
+---------------------------------------------------------------------------------
+bRook1 - Current position: 0, 7
+Range/available moves:
+
+---------------------------------------------------------------------------------
+bRook2 - Current position: 7, 7
+Range/available moves:
+
+---------------------------------------------------------------------------------
+bKnight1 - Current position: 1, 7
+Range/available moves:
+(1,7) (1,7) (1,7) (1,7) (1,7) (1,7) (1,7) (1,7)
+---------------------------------------------------------------------------------
+bKnight2 - Current position: 6, 7
+Range/available moves:
+(6,7) (6,7) (6,7) (6,7) (6,7) (6,7) (6,7) (6,7)
+---------------------------------------------------------------------------------
+bBishop1 - Current position: 2, 7
+Range/available moves:
+
+---------------------------------------------------------------------------------
+bBishop2 - Current position: 5, 7
+Range/available moves:
+
+---------------------------------------------------------------------------------
+bKing - Current position: 4, 7
+Range/available moves:
+(4,8) (5,8) (3,8)
+---------------------------------------------------------------------------------
+bQueen - Current position: 3, 7
+Range/available moves:
+
 ---------------------------------------------------------------------------------
 wPawn1 - Current position: 0, 1
 Range/available moves:
@@ -146,13 +209,17 @@ bPawn8 - Current position: 7, 6
 Range/available moves:
 
 ---------------------------------------------------------------------------------
+************************************************************************************************************************
 
 Issues w/ Pawns:
 First Moves -
     - Black pawns have no valid moves with it's current getRange (Issues w/ conditions in for loop)
     - White pawns have TOO many valid moves with it's current getRange (Issues w/ conditions in for loop as well)
         + hint: I would suggest not naming two variable y and Y
+    - If no piece is in front of a pawn, it will cause the program to crash -> infinite loop of checking spaces infront of it
 
 Pawns in general
     - When not moving for the first time, the range is incorrect, similar to Knight
         ex: if wPawn1 is on (0,3)
+
+

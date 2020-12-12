@@ -216,7 +216,10 @@ First Moves -
     - Black pawns have no valid moves with it's current getRange (Issues w/ conditions in for loop)
     - White pawns have TOO many valid moves with it's current getRange (Issues w/ conditions in for loop as well)
         + hint: I would suggest not naming two variable y and Y
+    - If no piece is in front of a pawn, it will cause the program to crash -> infinite loop of checking spaces infront of it
 
 Pawns in general
     - When not moving for the first time, the range is incorrect, similar to Knight
         ex: if wPawn1 is on (0,3)
+
+

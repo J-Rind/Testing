@@ -56,7 +56,7 @@ public class Pawn extends Piece {
         // Moving 2 spaces for first move
         if (pMove == 0){                //??If piece has not been moved
             if (this.getColor()) {
-                for (int x = X, y = Y + 1; y <= y + 2; y++) {                       // TYANG ISSUE HERE  -> should be 'y <= Y+2
+                for (int x = X, y = Y + 1; y <= Y + 2; y++) {                       // TYANG ISSUE HERE  -> should be 'y <= Y+2
                     if (getPiece(x, y, arr) == 0) {                                 // y is always <= y+2
                         this.range.add(new int[]{x, y});
                     } else if (getPiece(x, y, arr) == 1 || getPiece(x, y, arr) == 2) {
@@ -64,7 +64,7 @@ public class Pawn extends Piece {
                     }
                 }
             }else if (this.getColor() == false) {
-                for (int x = X, y = Y; y <= y - 2; y-- ) {                          // TYANG ISSUE HERE -> should be 'y = Y-1' and 'y >= Y-2'
+                for (int x = X, y = Y-1; y >= Y - 2; y-- ) {                        // TYANG ISSUE HERE -> should be 'y = Y-1' and 'y >= Y-2'
                     if (getPiece(x, y, arr) == 0) {                                 // y is never <= y-2
                         this.range.add(new int[]{x, y});                            // AND it will always have a piece on (X,Y)
                     } else if (getPiece(x, y, arr) == 1 || getPiece(x, y, arr) == 2) {

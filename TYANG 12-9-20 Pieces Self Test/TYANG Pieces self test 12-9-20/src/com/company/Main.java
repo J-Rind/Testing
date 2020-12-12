@@ -66,6 +66,8 @@ public class Main {
             piece.getRange(pieces);
         }
 
+        USE getUpdate() instead
+
 
         // List all possible moves           ***COPY AND PASTE WHERE NEEDED***
         for( Piece piece: pieces)
@@ -95,25 +97,27 @@ public class Main {
         System.out.println("Adding Pawns to the mix");
         */
 
+
         Pawn bPawn1 = new Pawn(0,6,"bPawn1",false);
-        Pawn bPawn2 = new Pawn(1,6,"bPawn2",false);
+        Pawn bPawn2 = new Pawn(1,1,"bPawn2",false);
         Pawn bPawn3 = new Pawn(2,6,"bPawn3",false);
         Pawn bPawn4 = new Pawn(3,6,"bPawn4",false);
         Pawn bPawn5 = new Pawn(4,6,"bPawn5",false);
         Pawn bPawn6 = new Pawn(5,6,"bPawn6",false);
-        Pawn bPawn7 = new Pawn(6,6,"bPawn7",false);
+        Pawn bPawn7 = new Pawn(6,1,"bPawn7",false);
         Pawn bPawn8 = new Pawn(7,6,"bPawn8",false);
 
 
         Pawn wPawn1 = new Pawn(0,1,"wPawn1",true);
-        Pawn wPawn2 = new Pawn(1,1,"wPawn2",true);
+        Pawn wPawn2 = new Pawn(1,6,"wPawn2",true);
         Pawn wPawn3 = new Pawn(2,1,"wPawn3",true);
         Pawn wPawn4 = new Pawn(3,1,"wPawn4",true);
         Pawn wPawn5 = new Pawn(4,1,"wPawn5",true);
         Pawn wPawn6 = new Pawn(5,1,"wPawn6",true);
-        Pawn wPawn7 = new Pawn(6,1,"wPawn7",true);
+        Pawn wPawn7 = new Pawn(6,6,"wPawn7",true);
         Pawn wPawn8 = new Pawn(7,1,"wPawn8",true);
 
+        wPawn7.pMove = 6;
         pieces.add(wPawn1);
         pieces.add(wPawn2);
         pieces.add(wPawn3);
@@ -132,10 +136,15 @@ public class Main {
         pieces.add(bPawn8);
 
 
+
         // Mass piece range update
+        wKing.updateRange(pieces);
+
+        /*
         for (Piece piece: pieces){
             piece.getRange(pieces);
         }
+         */
 
         // List all possible moves ***COPY AND PASTE WHERE NEEDED***
         for( Piece piece: pieces)
@@ -150,6 +159,29 @@ public class Main {
             System.out.println("\n---------------------------------------------------------------------------------");
         }
 
+        wKnight1.moveTo(2,2,wKing,pieces);
+        wKnight1.moveTo(1,0,wKing,pieces);
+
+        wKnight2.moveTo(5,2,wKing,pieces);
+        wKnight2.moveTo(6,0,wKing,pieces);
+
+        bKnight1.moveTo(2,5,bKing,pieces);
+        //bKnight1.moveTo(1,7,bKing,pieces);
+
+        bKnight2.moveTo(5,5,bKing,pieces);
+        //bKnight2.moveTo(6,7,bKing,pieces);
+
+        for( Piece piece: pieces)
+        {
+            System.out.println(piece.getName() + " - Current position: " + piece.getX() + ", " + piece.getY());
+            System.out.println("Range/available moves:");
+            for (int[] i: piece.range)
+            {
+                System.out.print("(" + i[0] + "," + i[1] + ") ");
+            }
+
+            System.out.println("\n---------------------------------------------------------------------------------");
+        }
 
         // **********************TESTING MOVEMENT w/ PAWNS *REQUIRES CHANGING PAWN CODE*******************
         /*
