@@ -38,6 +38,7 @@ Output of current board =
     This explains why A's are on top, and the Y value decreases
 
     EDIT: edit, need to flip the condition xcoord + ycoord = based on y alone  like above^^
+    THE MODIFIED CODE IS CURRENTLY INCORRECT w/ ATTEMPTING TO FIX X VALUES
 
 
 ***** No comments on saving/loading (A Grade)
