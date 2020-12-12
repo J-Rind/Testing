@@ -1,0 +1,81 @@
+TYANG 12-11-20
+
+NOTE: Most issues stem from issues with the Board
+    -> Board is not set up to work with Pieces still
+    -> Empty pieces cause the showBoard() to error as it cannot output a null piece
+    -> Pieces are constructed incorrectly and will feed in the wrong coordinates of where it's "placed" even if it's
+       shown on the board
+
+    ->
+    --B-rk1-A-8---B-kn1-B-8---B-bi1-C-8---B-qu1-D-8---B-kg1-D-8---B-bi2-F-8---B-kn2-G-8---B-rk2-H-8-
+    --Bpawn-A-7---Bpawn-B-7---Bpawn-C-7---Bpawn-D-7---Bpawn-D-7---Bpawn-F-7---Bpawn-G-7---Bpawn-H-7-
+    ____A--6________B--6________C--6________D--6________D--6________F--6________G--6________H--6____
+    ____A--5________B--5________C--5________D--5________D--5________F--5________G--5________H--5____
+    ____A--4________B--4________C--4________D--4________D--4________F--4________G--4________H--4____
+    ____A--3________B--3________C--3________D--3________D--3________F--3________G--3________H--3____
+    --Wpawn-A-2---Wpawn-B-2---Wpawn-C-2---Wpawn-D-2---Wpawn-D-2---Wpawn-F-2---Wpawn-G-2---Wpawn-H-2-
+    --W-rk1-A-1---W-kn1-B-1---W-bi1-C-1---W-qu1-D-1---W-kg1-D-1---W-bi2-F-1---W-kn2-G-1---W-rk2-H-1-
+    --B-rk1-A-8-on coordinates: (0,0)
+    Range:
+    --B-kn1-B-8-on coordinates: (0,1)
+    Range: (1,3) (2,2) (2,0) (1,-1) (-1,-1) (-2,0) (-2,2) (-1,3)
+    --B-bi1-C-8-on coordinates: (0,2)
+    Range:
+    --B-qu1-D-8-on coordinates: (0,3)
+    Range:
+    --B-kg1-D-8-on coordinates: (0,4)
+    Range: (-1,3) (-1,4) (-1,5)
+    --B-bi2-F-8-on coordinates: (0,5)
+    Range:
+    --B-kn2-G-8-on coordinates: (0,6)
+    Range: (1,8) (2,7) (2,5) (1,4) (-1,4) (-2,5) (-2,7) (-1,8)
+    --B-rk2-H-8-on coordinates: (0,7)
+    Range:
+    --Bpawn-A-7-on coordinates: (1,0)
+    Range: (1,-1) (1,-2)
+    --Bpawn-B-7-on coordinates: (1,1)
+    Range:
+    --Bpawn-C-7-on coordinates: (1,2)
+    Range:
+    --Bpawn-D-7-on coordinates: (1,3)
+    Range:
+    --Bpawn-D-7-on coordinates: (1,4)
+    Range:
+    --Bpawn-F-7-on coordinates: (1,5)
+    Range:
+    --Bpawn-G-7-on coordinates: (1,6)
+    Range:
+    --Bpawn-H-7-on coordinates: (1,7)
+    Range:
+    --Wpawn-A-2-on coordinates: (6,0)
+    Range:
+    --Wpawn-B-2-on coordinates: (6,1)
+    Range:
+    --Wpawn-C-2-on coordinates: (6,2)
+    Range:
+    --Wpawn-D-2-on coordinates: (6,3)
+    Range:
+    --Wpawn-D-2-on coordinates: (6,4)
+    Range:
+    --Wpawn-F-2-on coordinates: (6,5)
+    Range:
+    --Wpawn-G-2-on coordinates: (6,6)
+    Range:
+    --Wpawn-H-2-on coordinates: (6,7)
+    Range: (6,8) (6,9)
+    --W-rk1-A-1-on coordinates: (7,0)
+    Range:
+    --W-kn1-B-1-on coordinates: (7,1)
+    Range: (8,3) (9,2) (9,0) (8,-1) (6,-1) (5,0) (5,2)
+    --W-bi1-C-1-on coordinates: (7,2)
+    Range:
+    --W-qu1-D-1-on coordinates: (7,3)
+    Range:
+    --W-kg1-D-1-on coordinates: (7,4)
+    Range: (8,5) (8,4) (8,3)
+    --W-bi2-F-1-on coordinates: (7,5)
+    Range:
+    --W-kn2-G-1-on coordinates: (7,6)
+    Range: (8,8) (9,7) (9,5) (8,4) (6,4) (5,5) (5,7) (6,8)
+    --W-rk2-H-1-on coordinates: (7,7)
+    Range:
