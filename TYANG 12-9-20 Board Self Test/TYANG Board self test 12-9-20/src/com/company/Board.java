@@ -69,11 +69,12 @@ public class Board implements Serializable {
 
         //for loop to cycle through rows to establish setup of board
         for(int x = 0; x< 8; x++){
+
             //switch to establish each row
             switch(x){
                 case 0:
                     //setting back row for black side
-                    setBack(x, blackPiece,"B", false);
+                    setBack(x,blackPiece,"B", false);
                     break;
                 case 1:
                     //setting front row for black side
@@ -95,7 +96,7 @@ public class Board implements Serializable {
                     break;
                 case 6:
                     //setting front row for white side
-                    setFront(x, whitePiece,"W", true);
+                    setFront(x,whitePiece,"W", true);
                     break;
                 case 7:
                     //setting back row for white side
@@ -114,74 +115,48 @@ public class Board implements Serializable {
         char xcord = 0;
         char ycord = 0;
 
-        if (row == 0)
-        {
-            xcord = 'A';
-        }
-        if (row == 1)
-        {
-            xcord = 'B';
-        }
-        if (row == 2)
-        {
-            xcord = 'C';
-        }
-        if (row == 3)
-        {
-            xcord = 'D';
-        }
-        if (row == 4)
-        {
-            xcord = 'E';
-        }
-        if (row == 5)
-        {
-            xcord = 'F';
-        }
-        if (row == 6)
-        {
-            xcord = 'G';
-        }
-        if (row == 7)
-        {
-            xcord = 'H';
-        }
-
-
         for(int y = 0; y < 8; y++){
 
-
-            if (y == 0)
+            if (row == 0)                                     //TYANG should be based on the X rather than y
             {
                 ycord = '8';
+                xcord = 'H';                                  // MERGED IF STATEMENTS ->
             }
-            if (y == 1)
+            if (row == 1)
             {
                 ycord = '7';
+                xcord = 'G';
             }
-            if (y == 2)
+            if (row == 2)
             {
                 ycord = '6';
+                xcord = 'F';
             }
-            if (y == 3)
+            if (row == 3)
             {
                 ycord = '5';
+                xcord = 'E';
             }
-            if (y == 4)
+            if (row == 4)
             {
                 ycord = '4';
+                xcord = 'D';
             }
-            if (y == 5)
+            if (row == 5)
             {
                 ycord = '3';
+                xcord = 'C';
             }
-            if (y == 6)
+            if (row == 6)
             {
                 ycord = '2';
+                xcord = 'B';
             }
-            if (y == 7)
+            if (row == 7)
             {
                 ycord = '1';
+                xcord = 'A';
+
             }
 
                                                 // TYANG Pawns need to be created like other pieces (UNKOWN AT THE TIME)
@@ -209,76 +184,50 @@ public class Board implements Serializable {
         char xcord = 0;
         char ycord = 0;
 
-        if (row == 0)
-        {
-            xcord = 'A';
-        }
-        if (row == 1)
-        {
-            xcord = 'B';
-        }
-        if (row == 2)
-        {
-            xcord = 'C';
-        }
-        if (row == 3)
-        {
-            xcord = 'D';
-        }
-        if (row == 4)
-        {
-            xcord = 'E';
-        }
-        if (row == 5)
-        {
-            xcord = 'F';
-        }
-        if (row == 6)
-        {
-            xcord = 'G';
-        }
-        if (row == 7)
-        {
-            xcord = 'H';
-        }
-
-
-
         //the order of the back row is rook, knight, bishop, queen, king, bishop, knight, rook, from left to right
         //so we used a switch to build each specific piece as the for loop iterates through each square
         for(int y = 0; y < 8; y++){
 
-            if (y == 0)
+            if (row == 0)                                     //TYANG should be based on the X rather than y
             {
                 ycord = '8';
+                xcord = 'H';                                  // MERGED IF STATEMENTS ->
             }
-            if (y == 1)
+            if (row == 1)
             {
                 ycord = '7';
+                xcord = 'G';
             }
-            if (y == 2)
+            if (row == 2)
             {
                 ycord = '6';
+                xcord = 'F';
             }
-            if (y == 3)
+            if (row == 3)
             {
                 ycord = '5';
+                xcord = 'E';
             }
-            if (y == 4)
+            if (row == 4)
             {
                 ycord = '4';
+                xcord = 'D';
             }
-            if (y == 5)
+            if (row == 5)
             {
                 ycord = '3';
+                xcord = 'C';
             }
-            if (y == 6)
+            if (row == 6)
             {
                 ycord = '2';
+                xcord = 'B';
             }
-            if (y == 7)
+            if (row == 7)
             {
                 ycord = '1';
+                xcord = 'A';
+
             }
 
             switch(y){
@@ -346,73 +295,48 @@ public class Board implements Serializable {
         char xcord = 0;
         char ycord = 0;
 
-        if (row == 0)
-        {
-            xcord = 'A';
-        }
-        if (row == 1)
-        {
-            xcord = 'B';
-        }
-        if (row == 2)
-        {
-            xcord = 'C';
-        }
-        if (row == 3)
-        {
-            xcord = 'D';
-        }
-        if (row == 4)
-        {
-            xcord = 'E';
-        }
-        if (row == 5)
-        {
-            xcord = 'F';
-        }
-        if (row == 6)
-        {
-            xcord = 'G';
-        }
-        if (row == 7)
-        {
-            xcord = 'H';
-        }
-
         for(int y = 0; y < 8; y++) {
 
-
-            if (y == 0)
+            if (row == 0)                                     //TYANG should be based on the X rather than y
             {
                 ycord = '8';
+                xcord = 'H';                                  // MERGED IF STATEMENTS ->
             }
-            if (y == 1)
+            if (row == 1)
             {
                 ycord = '7';
+                xcord = 'G';
             }
-            if (y == 2)
+            if (row == 2)
             {
                 ycord = '6';
+                xcord = 'F';
             }
-            if (y == 3)
+            if (row == 3)
             {
                 ycord = '5';
+                xcord = 'E';
             }
-            if (y == 4)
+            if (row == 4)
             {
                 ycord = '4';
+                xcord = 'D';
             }
-            if (y == 5)
+            if (row == 5)
             {
                 ycord = '3';
+                xcord = 'C';
             }
-            if (y == 6)
+            if (row == 6)
             {
                 ycord = '2';
+                xcord = 'B';
             }
-            if (y == 7)
+            if (row == 7)
             {
                 ycord = '1';
+                xcord = 'A';
+
             }
 
 
@@ -528,6 +452,8 @@ public class Board implements Serializable {
             Piece emptyPiece = new Piece();
             //sets the object as blank instead of as a piece
             emptyPiece.setName("__" + xcord + "-" + ycord + "__");
+                                                                                    // TYANG - Issue w/ isAlive() status
+            emptyPiece.setIsAlive(false);                                           // Would also need to set to false
             //sets the blank object to the specific square
             squares[x][y].setPiece(emptyPiece);
         } catch(ArrayIndexOutOfBoundsException e){
@@ -609,9 +535,5 @@ public class Board implements Serializable {
         }
 
     }
-
-
-
-
 }
 

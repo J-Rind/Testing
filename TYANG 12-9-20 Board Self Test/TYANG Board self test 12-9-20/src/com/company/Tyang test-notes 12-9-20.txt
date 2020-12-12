@@ -1,18 +1,22 @@
 TYANG 12-10-20 12:15 AM self testing of Board code
+*****************************************NOTE: CODE IS MODIFIED*****************************************************************
 
 Issues:
 
 - Although remove piece has error checking for index range, set piece does not
-    + Could be problematic if the other teams do not account for this
+    + Could be problematic
 
 - Pawns required parameters to be created (unknown at the time though w/ easy fix -> similar to other pieces)
 
 
 - showBoard() -> Does not function
     + a "piece" needs to be declared when checking it's isAlive variable
+
     + isAlive is private and needs to be accessed through piece.getAlive()
-    + null pieces cause an error when showing the board (if issues are fixed)
+
+    + null pieces cause an error when showing the board (if issues are fixed), also will need params for showing
         +++ ALSO: empty pieces are considered alive since that status is not set to false
+        +++ THIS APPLIES TO REMOVING PIECES AS WELL
 
 - Layout does not match the expected standard for chess
 ****************************************OUTPUT OF FIXED CODE************************************************************
@@ -32,6 +36,8 @@ Output of current board =
     (0,0) , (0,1) , (0,2) ... (0,7)
     (1,0),  (1,1) , (1,2) ... (1,7)
     This explains why A's are on top, and the Y value decreases
+
+    EDIT: edit, need to flip the condition xcoord + ycoord = based on y alone  like above^^
 
 
 ***** No comments on saving/loading (A Grade)
