@@ -129,6 +129,6 @@ public class Input {
         board.setPieceOnSquare(myPiece, xCoordTwo, yCoordTwo);
         board.removePieceOnSpace(xCoordOne, yCoordOne);
 
-        myPiece.updateRange(arr);                                           //TYANG manual update required
+        
     } 
 }
