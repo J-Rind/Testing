@@ -1,0 +1,22 @@
+TYANG 12-13-20 Pieces castling notes
+
+NOTE: Pawn is modified to work in my project
+
+Castling Notes:
+
+- If a King attempts to move into a check against a Pawn the move occurs
+    -> Rook is fully moved to Castling position, King is moved back as a check is spotted
+    -> Although Rook is fully moved to the Castling position, it's pMove isn't incremented, only the King's
+    -> noticed that the King's pMove will not increment if move is blocked (not valid range)
+    -> noticed that the King's range will show this checked castling move as valid (appears in range)
+
+
+
+Things to note that do not regard the castling:
+
+- Although I'm not officially in charge of the pieces, there are issues with the Pawn still
+    -> the issue was similar to the Knight pieces only sending in their own coordinates on 2nd+ moves
+    -> ALSO condition is incorrect for Black Pawn moving down 1
+
+    -> Pawns do not have the option to attack on their first move as well
+
