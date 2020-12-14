@@ -1,0 +1,31 @@
+CASTLING (Rook and King Test)
+
+1. Attempt to use the doCastling method using whiteKing and whiteRook1. [Successful]
+    Rook whiteRook1 = new Rook(0,0,"White Rook 1", true);
+    King whiteKing = new King(4,0,"King",true);
+    testPieces.add(whiteRook1);
+    testPieces.add(whiteKing);
+    whiteKing.validCastling(testPieces, whiteRook1);
+    whiteKing.doCastling(testPieces,whiteRook1);
+
+2. Test to make sure the castling does not work with an already moved King or Rook. [Successful]
+    whiteKing.moveTo(3,0,whiteKing,testPieces);
+    whiteKing.validCastling(testPieces, whiteRook1);
+    whiteKing.doCastling(testPieces,whiteRook1);
+    whiteRook1.print();
+
+3. Works properly for both black and white pieces (rook 1). [Successful]
+
+4. Works for Rooks on both side of the king. (Tests conducted separately) [Not Successful]
+    ok, so I tried using this method for both the Rooks on both sides of the kings in separate tests (black and white)
+    It seems to work properly for the Rook that on one of the sides that is 4 spaces away from the king
+    but not does work for the Rook that is 3 spaces away on the other side.
+    The tests were conducted separately so with each new test, I made sure they qualified to make this move.
+
+    I used the following tests:
+    I placed white rook 1 and 2 at (0,0) and (7,0)
+    I placed black rook 1 and 2 at (0,7) and (7,7)
+    The white king and black king were placed at (4,0) and (7,0)
+    OUTPUT:-
+    Test 1: The castling was working properly when I used it between rook 1 and king (for both colors).
+    Test 2: However, it would not work when I use Rook 2 and king (for both colors).
