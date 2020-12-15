@@ -1,0 +1,18 @@
+Tyang 12-14-20 Interface saving
+
+** Unable to run code, even if obtaining files as a Zip (errors pulling from origin on my end since I pressed push by mistake)
+
+Steps taken:
+    - removed duplicate class Players.java
+    - removed isCheckMate (causing errors, might only be on my end since it appears only on my GitHub folders)
+
+Uppercase + Lowercase issues
+    - fixed GameSaver -> gameSaver
+    - fixed XmlDecoder -> XMLDecoder
+    - fixed savedGame -> SavedGame
+
+takeTurn issues:
+    - fixed gameSaver.SavedGame -> gameSaver.savedGame
+        -> swapped to pass player, not this.player.getName()
+        -> swapped around whitePlayer -> playerWhite   and blackPlayer -> playerBlack
+

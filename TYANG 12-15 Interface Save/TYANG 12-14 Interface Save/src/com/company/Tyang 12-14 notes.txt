@@ -1,0 +1,36 @@
+Tyang 12-14-20 Interface saving
+
+SOLVED ISSUES
+** Unable to run code, even if obtaining files as a Zip (errors pulling from origin on my end since I pressed push by mistake)
+
+Steps taken:
+    - removed duplicate class Players.java
+    - removed isCheckMate (causing errors, might only be on my end since it appears only on my GitHub folders)
+
+Uppercase + Lowercase issues
+    - fixed GameSaver -> gameSaver
+    - fixed XmlDecoder -> XMLDecoder
+    - fixed savedGame -> SavedGame
+
+takeTurn issues:
+    - fixed gameSaver.SavedGame -> gameSaver.savedGame
+        -> swapped to pass player, not this.player.getName()
+        -> swapped around whitePlayer -> playerWhite   and blackPlayer -> playerBlack
+------------------------------------------------------------------------------------------------------------------------
+Tyang 12-14-20 9PM test/check
+
+Understood that some of it is old code -> modified some of it to allow for some movements
+
+ISSUES :
+    -- MOST ISSUES = NEED TO FOLLOW JAVA BEANS RULES FOR XML
+
+        -> getters AND setters required for object
+        -> implements Serializable
+        -> empty constructor required
+
+The game will load, but no movements will have been saved if these requirements have been implemented
+    -> also, loading at the moment does not have any form of error checking/catching for wrong files
+
+    -> I believe the issue is on the pieces side
+        -> Only the Pieces will cause errors saving, attempting to follow the rules for XML is also not working on my end
+
