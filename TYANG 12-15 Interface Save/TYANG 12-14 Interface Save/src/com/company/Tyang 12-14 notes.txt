@@ -18,6 +18,7 @@ takeTurn issues:
         -> swapped around whitePlayer -> playerWhite   and blackPlayer -> playerBlack
 ------------------------------------------------------------------------------------------------------------------------
 Tyang 12-14-20 9PM test/check
+File that can be loaded is included under Alan, it should load up correctly
 
 Understood that some of it is old code -> modified some of it to allow for some movements
 
