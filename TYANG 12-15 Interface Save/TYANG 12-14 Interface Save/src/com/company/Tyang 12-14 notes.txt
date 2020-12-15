@@ -28,9 +28,9 @@ ISSUES :
         -> implements Serializable
         -> empty constructor required
 
-The game will load, but no movements will have been saved if these requirements have been implemented
-    -> also, loading at the moment does not have any form of error checking/catching for wrong files
+The game will not be able to load due to a null exception error when loading the board up. When testing, it will "load" and empty Save though
+    -> also, loading at the moment does not have any form of error checking/catching for wrong files I believe
 
-    -> I believe the issue is on the pieces side
-        -> Only the Pieces will cause errors saving, attempting to follow the rules for XML is also not working on my end
+    -> I believe the issue is on the pieces side with how they are coded
+        -> Only the Pieces will cause errors when saving, attempting to follow the rules for XML is also not working as well on my end for them
 
