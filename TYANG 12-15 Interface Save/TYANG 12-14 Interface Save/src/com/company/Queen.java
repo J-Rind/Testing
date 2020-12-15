@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 public class Queen extends Piece {
 
+    public Queen(){
+        super();
+    }
 
     public Queen(int x, int y, String t, Boolean white) {
         super(x, y, t, white);

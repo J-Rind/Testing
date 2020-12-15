@@ -5,6 +5,9 @@ import java.util.ArrayList;
 
 public class Rook extends Piece{
 
+    public Rook(){
+        super();
+    }
 
     public Rook(int x, int y, String t, Boolean white) {
         super(x, y, t, white);

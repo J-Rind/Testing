@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 public class Knight extends Piece {
 
+    public Knight(){
+        super();
+    }
 
     public Knight(int x, int y, String t, Boolean white) {
         super(x, y, t, white);

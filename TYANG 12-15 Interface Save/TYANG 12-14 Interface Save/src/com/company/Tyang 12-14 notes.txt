@@ -1,4 +1,4 @@
-Tyang 12-14-20 Interface saving, skip first portion as it was before syntax fixes
+Tyang 12-14-20 Interface saving
 
 SOLVED ISSUES
 ** Unable to run code, even if obtaining files as a Zip (errors pulling from origin on my end since I pressed push by mistake)
@@ -28,14 +28,8 @@ ISSUES :
         -> implements Serializable
         -> empty constructor required
 
-The game will not be able to load due to a null exception error when loading the board up. When testing, it will "load" and empty SaveGame though
-    -> also, loading at the moment does not have any form of error checking/catching for wrong files I believe
-
-    -> I believe the issue is on the pieces side with how they are coded
-        -> Only the Pieces will cause errors when saving (not modified), attempting to follow the rules for XML allows them to save, but it still errors
-
-    -> I made modification attempts on the pieces myself -> serializable Piece, made it public + public constructor, and etc
-            -> King and Pawn -> also had issues, were the only ones that required empty Constructors to work for some reason 
-            
-   *** Again, even with these changes it still results in an error when loading the files due to a null exception, unsure of it's causes at the moment ***
-
+    -> Issues reside on the Pieces side as well -> same format required for Piece
+        -> Piece constructors need to be public
+        -> Piece needs to implement Serializable
+            -> all pieces require an empty constructor
+        -> Piece class needs default getters and setters (alt+insert -> added 3 more generated get/set methods)

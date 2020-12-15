@@ -11,6 +11,26 @@ public class Piece implements Serializable {
     private Boolean isWhite;
     public ArrayList<int[]> range = new ArrayList<>();
 
+    public void setAlive(Boolean alive) {
+        isAlive = alive;
+    }
+
+    public Boolean getWhite() {
+        return isWhite;
+    }
+
+    public void setWhite(Boolean white) {
+        isWhite = white;
+    }
+
+    public ArrayList<int[]> getRange() {
+        return range;
+    }
+
+    public void setRange(ArrayList<int[]> range) {
+        this.range = range;
+    }
+
     public Piece(int x, int y, String t, Boolean white)     //TYANG MISSING PUBLIC
     {
         X = x;

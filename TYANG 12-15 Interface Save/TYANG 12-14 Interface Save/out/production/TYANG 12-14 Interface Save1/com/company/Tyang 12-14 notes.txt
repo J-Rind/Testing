@@ -1,5 +1,6 @@
 Tyang 12-14-20 Interface saving
 
+SOLVED ISSUES
 ** Unable to run code, even if obtaining files as a Zip (errors pulling from origin on my end since I pressed push by mistake)
 
 Steps taken:
@@ -20,16 +21,16 @@ Tyang 12-14-20 9PM test/check
 
 Understood that some of it is old code -> modified some of it to allow for some movements
 
-ISSUES : If not empty default constructor in SavedGame.java = InstatiationException
--> FOUND solution just as a heads up since this regards XML and JavaBeans standards
-    -- MOST ISSUES = NEED TO FOLLOW JAVA BEANS RULES
+ISSUES :
+    -- MOST ISSUES = NEED TO FOLLOW JAVA BEANS RULES FOR XML
 
-        -> getters AND setters for each
+        -> getters AND setters required for object
         -> implements Serializable
-        -> empty contructor4
+        -> empty constructor required
 
 The game will load, but no movements will have been saved if these requirements have been implemented
     -> also, loading at the moment does not have any form of error checking/catching for wrong files
 
-    -> I believe the issue is on the pieces side as they implemented Abstract classes that Override a few methods
-        -> Pawn, King, and Rook will cause errors to show up when attempting to save
+    -> I believe the issue is on the pieces side
+        -> Only the Pieces will cause errors saving, attempting to follow the rules for XML is also not working on my end
+
