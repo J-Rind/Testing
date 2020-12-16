@@ -1,0 +1,84 @@
+Found sample code from someone elses project so we can learn from it.
+
+Source:https://github.com/samistart/Chess/blob/master/src/pieces/Chessboard.java
+
+
+
+/**
+	 * Take user input for the instructions for move in the form
+	 * "start coords to destination coords", e.g. "d2 to d3" and converts this
+	 * string to array coordinates for the Chessboard. Checks if the move is
+	 * valid using moveValid(). If valid moves piece to destination on
+	 * Chessboard and updates score with updateScore(). If invalid prints error
+	 * message and recursively calls itself.
+	 */
+
+	public void move() {
+
+		System.out
+				.println("___________________________________________________\n"
+						+ "Score: White "
+						+ whiteScore
+						+ " | "
+						+ blackScore
+						+ " Black");
+
+		if (invalidMove) {
+			System.err.println("Move is invalid. Please try again:");
+			// System.out.println("Move is invalid. Please try again:");
+			invalidMove = false;
+		}
+
+		else if (whitesTurnToMove) {
+			System.out
+					.println("___________________________________________________\n"
+							+ "White's turn to move\n"
+							+ "___________________________________________________\n");
+		} else {
+			System.out
+					.println("___________________________________________________\n"
+							+ "Black's turn to move\n"
+							+ "___________________________________________________\n");
+		}
+
+		move = user_input.nextLine();
+
+		if (move.equalsIgnoreCase("exit")) {
+			gameRunning = false;
+			System.out.println("Thanks for playing.");
+			return;
+		}
+
+		// convert to lower case
+		String lowerCase = move.toLowerCase();
+		// parse move string into components
+		String[] components = lowerCase.split(" ");
+
+		// if you assume that move is "e1 to e5" then
+		// components[0].chartAt(0) = 'e'
+		// components [0].charAt (1) = '1'
+
+		// use chars in components to set the array coordinates of the
+		// move origin and move destination
+
+		srcRow = 7 - (components[0].charAt(1) - '1');
+		srcCol = components[0].charAt(0) - 'a';
+		destRow = 7 - (components[2].charAt(1) - '1');
+		destCol = components[2].charAt(0) - 'a';
+
+		if (moveValid()) {
+			updateScore();
+			// put piece in destination
+			chessboard[destRow][destCol] = chessboard[srcRow][srcCol];
+			// empty the origin of the move
+			chessboard[srcRow][srcCol] = null;
+			whitesTurnToMove = !whitesTurnToMove;
+		} else {
+			invalidMove = true;
+			move();
+
+		}
+
+	}
+
+}

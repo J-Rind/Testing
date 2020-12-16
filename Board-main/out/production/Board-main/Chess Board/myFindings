@@ -1,0 +1,21 @@
+Name: Zain Jameeluddin
+Notes: These were my findings on testing the Board.java file as of 12/15/2020
+as provided by the board team in their most updated file.
+
+Findings
+--------
+
+1. Board Test Code as provided by the Board team:
+
+        Board myBoard = new Board();
+        ArrayList<Piece> myList = new ArrayList<>();
+        myList = myBoard.showBoard();
+
+        System.out.println();
+        for (Piece p: myList){
+            System.out.println (p.getName());
+
+        }
+
+2. Board and Pieces on the Board print out successfully
+

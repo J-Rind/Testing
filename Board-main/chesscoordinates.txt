@@ -1,0 +1,7 @@
+B-Grade notes:
+
+To think of the chess game coordinate [a,b,c,d,e,f,g,h].
+You need to think of them as numbers  [1,2,3,4,5,6,7,8]
+so if you see a square like [3,4] or [5,1]
+remember that the columns come first, then the row
+so when you see something like c3 think [3,3] in your head 

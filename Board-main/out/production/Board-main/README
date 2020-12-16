@@ -1,0 +1,2 @@
+This repo will hold the code for our Chess board. This READ ME is just to get started
+repo includes the main class that will take and tie in all the other classes:Board,square,and Piece

@@ -1,0 +1,79 @@
+Name: Zain Jameeluddin
+Notes: These were my findings on testing the Board.java file as of 12/15/2020
+as provided by the board team in their most updated file.
+
+Findings
+--------
+
+1. Board Test Code as provided by the Board team:
+
+        Board myBoard = new Board();
+        ArrayList<Piece> myList = new ArrayList<>();
+        myList = myBoard.showBoard();
+
+        System.out.println();
+        for (Piece p: myList){
+            System.out.println (p.getName());
+
+        }
+
+2. Board and Pieces on the Board print out successfully
+
+-B-rk-1-A-8--B-kn-1-B-8--B-bi-1-C-8--B-qu-1-D-8--B-kg-1-E-8--B-bi-2-F-8--B-kn-2-G-8--B-rk-2-H-8-
+-B-pawn-A-7--B-pawn-B-7--B-pawn-C-7--B-pawn-D-7--B-pawn-E-7--B-pawn-F-7--B-pawn-G-7--B-pawn-H-7-
+____A--6________B--6________C--6________D--6________E--6________F--6________G--6________H--6____
+____A--5________B--5________C--5________D--5________E--5________F--5________G--5________H--5____
+____A--4________B--4________C--4________D--4________E--4________F--4________G--4________H--4____
+____A--3________B--3________C--3________D--3________E--3________F--3________G--3________H--3____
+-W-pawn-A-2--W-pawn-B-2--W-pawn-C-2--W-pawn-D-2--W-pawn-E-2--W-pawn-F-2--W-pawn-G-2--W-pawn-H-2-
+-W-rk-1-A-1--W-kn-1-B-1--W-bi-1-C-1--W-qu-1-D-1--W-kg-1-E-1--W-bi-2-F-1--W-kn-2-G-1--W-rk-2-H-1-
+
+-B-rk-1-A-8-
+-B-kn-1-B-8-
+-B-bi-1-C-8-
+-B-qu-1-D-8-
+-B-kg-1-E-8-
+-B-bi-2-F-8-
+-B-kn-2-G-8-
+-B-rk-2-H-8-
+-B-pawn-A-7-
+-B-pawn-B-7-
+-B-pawn-C-7-
+-B-pawn-D-7-
+-B-pawn-E-7-
+-B-pawn-F-7-
+-B-pawn-G-7-
+-B-pawn-H-7-
+-W-pawn-A-2-
+-W-pawn-B-2-
+-W-pawn-C-2-
+-W-pawn-D-2-
+-W-pawn-E-2-
+-W-pawn-F-2-
+-W-pawn-G-2-
+-W-pawn-H-2-
+-W-rk-1-A-1-
+-W-kn-1-B-1-
+-W-bi-1-C-1-
+-W-qu-1-D-1-
+-W-kg-1-E-1-
+-W-bi-2-F-1-
+-W-kn-2-G-1-
+-W-rk-2-H-1-
+
+
+3. Issues/Problems/Comments:
+    A.There weren't any coding issues as the Board.java class ran successfully.
+    B.The only issues I had was when I downloaded the Chess Board folder there were many duplicate
+      files that were preventing the program from running. In order to test the Board file the files
+      and folders I had to delete were as follows under the following files
+      1. Under the J-Rind/Board
+        a. I had to delete all .java files because they were duplicates
+            Board.java, Piece.java, and Square.java
+      2. Under the J-Rind/Board/ Chess Board
+        b. I had to delete the out/production/Chess Board/com/company folder because these
+            were also just duplicates that prevented the program from running. Because these were all
+            duplicates IntelliJ is getting confused as to which file to run.
+    C. Program was able to run successfully the files/folders listed above were removed or deleted.
+        I would recommend to the Board team to make these changes and remove the duplicates. Other than
+        that program ran successfully. Great Job!
