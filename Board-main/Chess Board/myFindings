@@ -71,7 +71,7 @@ ____A--3________B--3________C--3________D--3________E--3________F--3________G--3
         a. I had to delete all .java files because they were duplicates
             Board.java, Piece.java, and Square.java
       2. Under the J-Rind/Board/ Chess Board
-        b. I had to delete the out/production/Chess Board/com/company folder because these
+        b. I had to delete the files under out/production/Chess Board/com/company folder because these
             were also just duplicates that prevented the program from running. Because these were all
             duplicates IntelliJ is getting confused as to which file to run.
     C. Program was able to run successfully the files/folders listed above were removed or deleted.
